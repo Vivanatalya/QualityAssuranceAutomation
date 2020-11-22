@@ -1,0 +1,766 @@
+{
+  "id": "c82d41ec-6a2d-4a5f-91ee-10be9968f58c",
+  "version": "2.0",
+  "name": "Selenium_IDE_PoC",
+  "url": "https://www.ikea.com/pl/pl/",
+  "tests": [{
+    "id": "768d5fab-ed38-47ea-a42e-c420ca1ffe52",
+    "name": "Test 1",
+    "commands": [{
+      "id": "291c6c96-9f50-4b76-8661-a012d2047dd6",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/pl/pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee8874c3-62a3-4aa8-af7a-d096a9cad34a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2dc6d70a-1658-4a4d-90d5-1e05db6e2fc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__nav__main > li:nth-child(1) font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main > li:nth-child(1) font > font", "css:finder"],
+        ["xpath=//li/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e86170e3-f663-4251-9851-3c39812ed194",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-header__nav__main > li:nth-child(1) font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main > li:nth-child(1) font > font", "css:finder"],
+        ["xpath=//li/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9e09b41-f93c-46fc-82e4-17ac5d42da2c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-header__nav__main > li:nth-child(1) font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main > li:nth-child(1) font > font", "css:finder"],
+        ["xpath=//li/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "345ca665-898e-437b-b07b-8bb59d8f7c3d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Łóżka i materace",
+      "targets": [
+        ["linkText=Łóżka i materace", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(7) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Łóżka i materace')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/pl/pl/cat/lozka-i-materace-bm001/')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Łóżka i materace')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cc9b5f4-f140-414c-95f4-95d5a45346bf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Łóżka",
+      "targets": [
+        ["linkText=Łóżka", "linkText"],
+        ["css=li:nth-child(7) li:nth-child(2) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Łóżka')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/pl/pl/cat/lozka-bm003/')]", "xpath:href"],
+        ["xpath=//li[7]/nav/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9ff9ac2-0881-488a-aa08-b61259664ed3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vn-link:nth-child(3) font > font",
+      "targets": [
+        ["css=.vn-link:nth-child(3) font > font", "css:finder"],
+        ["xpath=//a[3]/span[2]/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "705a1d44-76db-4745-b5b8-4e159fffa0e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-pill:nth-child(3) font > font",
+      "targets": [
+        ["css=.plp-pill:nth-child(3) font > font", "css:finder"],
+        ["xpath=//button[3]/span/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "200f81a8-bebb-44c9-adfd-af68afdf69da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-checkbox__wrapper--80x200 .plp-checkbox__symbol",
+      "targets": [
+        ["css=.plp-checkbox__wrapper--80x200 .plp-checkbox__symbol", "css:finder"],
+        ["xpath=//div[@id='SEC_filter-REFERENCE_MEASUREMENTS']/label/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b4ed79a-19d8-48e0-bc6c-f3c3e1553a69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-btn__label > span > font > font",
+      "targets": [
+        ["css=.plp-btn__label > span > font > font", "css:finder"],
+        ["xpath=//span/span/span/span/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88c6c3e0-0308-4ce3-9756-f69b417ef99e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(4) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(4) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/flekke-lezanka-z-2-szufladami-2-materace-bialy-malfors-srednio-twardy__0461563_PE608746_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[4]/div/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "365d4d64-b78c-405d-829e-cb7ecefb23a2",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/flekke-lezanka-z-2-szufladami-2-materace-bialy-malfors-srednio-twardy__0461563_PE608746_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[2]/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "deb0189e-e191-4b31-ac27-7474c1c802f4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,100)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00ef53bc-3ed1-4bd1-abce-e9bcd20bdb69",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,716)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "91605974-a6b9-4c32-b21e-c8ef1052c930",
+    "name": "Test 5",
+    "commands": [{
+      "id": "ef3c6da4-f366-4bfe-96a6-cd3695e1e58e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/pl/pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68ee6298-ae64-41db-b7be-53e72b578eec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5829546-7f01-48f6-806f-c7fe70f389fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__nav__main > li:nth-child(3) font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main > li:nth-child(3) font > font", "css:finder"],
+        ["xpath=//li[3]/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da3f2fc8-ba10-4a2d-aa93-c0a11c27a5f0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1400)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d97d44b-42a5-4949-959c-3f0f90111d36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn--tertiary:nth-child(1) font > font",
+      "targets": [
+        ["css=.btn--tertiary:nth-child(1) font > font", "css:finder"],
+        ["xpath=//div[@id='fh-services-filters']/div/a/span/font/font", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02a9f3d1-16ca-4ee2-85a7-2a90bc6f4e89",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,280)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88ff7b63-3850-474e-a592-33aafa6ea177",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,594)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50f2d678-dbee-4dc5-95e3-c4583fb6fcef",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1848)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acbc58a2-0f40-4e52-96de-88b4782328a0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2100)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b9c8385-fa73-4644-9857-f597b96d7180",
+      "comment": "",
+      "command": "click",
+      "target": "css=#b6382d30-136d-11eb-be0a-3900d4762597 .pub__btn:nth-child(2) font:nth-child(1) > font:nth-child(1)",
+      "targets": [
+        ["css=#b6382d30-136d-11eb-be0a-3900d4762597 .pub__btn:nth-child(2) font:nth-child(1) > font:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='b6382d30-136d-11eb-be0a-3900d4762597']/div/div[2]/div/div/a/span/span/span/font/font", "xpath:idRelative"],
+        ["xpath=//section[5]/div/div/div[2]/div/div/a/span/span/span/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cd26ff2-1333-4e63-87e8-4a0b17f36b38",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#d866f7f0-1517-11eb-86b9-a963aa0637e1 .pub__aspect-ratio-image__image",
+      "targets": [
+        ["css=#d866f7f0-1517-11eb-86b9-a963aa0637e1 .pub__aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[@alt='Inspiracja miesiąca']", "xpath:img"],
+        ["xpath=//div[@id='d866f7f0-1517-11eb-86b9-a963aa0637e1']/div/div/a/span/img", "xpath:idRelative"],
+        ["xpath=//div/a/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fe62c35-d3dd-4bcc-9d58-af65356f06a1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#d866f7f0-1517-11eb-86b9-a963aa0637e1 .pub__aspect-ratio-image__image",
+      "targets": [
+        ["css=#d866f7f0-1517-11eb-86b9-a963aa0637e1 .pub__aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[@alt='Натхнення місяця']", "xpath:img"],
+        ["xpath=//div[@id='d866f7f0-1517-11eb-86b9-a963aa0637e1']/div/div/a/span/img", "xpath:idRelative"],
+        ["xpath=//div/a/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "802b87a2-b631-40ae-b338-00801eda12e4",
+    "name": "Test 2",
+    "commands": [{
+      "id": "e962dd21-d9bd-4e3a-94f4-77dd7249a76d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/pl/pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c911178-233e-4f10-8731-e06943308179",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85e6a60e-6f20-4961-bf08-392e69fa0679",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__nav__main > li:nth-child(1) font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main > li:nth-child(1) font > font", "css:finder"],
+        ["xpath=//li/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddaa7180-b3f7-4313-b084-7d8bb9ef26e0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Łóżka i materace",
+      "targets": [
+        ["linkText=Łóżka i materace", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(7) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Łóżka i materace')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/pl/pl/cat/lozka-i-materace-bm001/')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Łóżka i materace')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cea0687-b04b-4cf0-a6d9-1658aa9422e1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Łóżka",
+      "targets": [
+        ["linkText=Łóżka", "linkText"],
+        ["css=li:nth-child(7) li:nth-child(2) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Łóżka')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/pl/pl/cat/lozka-bm003/')]", "xpath:href"],
+        ["xpath=//li[7]/nav/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f90b532-1cda-4c02-a34a-88802c03f7b7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vn-link:nth-child(3) font > font",
+      "targets": [
+        ["css=.vn-link:nth-child(3) font > font", "css:finder"],
+        ["xpath=//a[3]/span[2]/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "821b7885-6b12-48be-92b9-8ec2a98f71f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vn-link:nth-child(3) font > font",
+      "targets": [
+        ["css=.vn-link:nth-child(3) font > font", "css:finder"],
+        ["xpath=//a[3]/span[2]/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "988f3f8a-e3af-4e0f-adf0-44d6cb19944f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-pill:nth-child(3)",
+      "targets": [
+        ["css=.plp-pill:nth-child(3)", "css:finder"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Rozmiar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e332e7e1-6eb3-40af-a8f5-4f9cf6df3b69",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-pill:nth-child(3)",
+      "targets": [
+        ["css=.plp-pill:nth-child(3)", "css:finder"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Rozmiar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24a48b4d-b4ec-41e2-a276-45820223cb34",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-pill:nth-child(3) > .plp-pill__label",
+      "targets": [
+        ["css=.plp-pill:nth-child(3) > .plp-pill__label", "css:finder"],
+        ["xpath=//button[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rozmiar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38dbaaa8-a76e-4a79-b83c-d715869c2436",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-pill:nth-child(3) > .plp-pill__label",
+      "targets": [
+        ["css=.plp-pill:nth-child(3) > .plp-pill__label", "css:finder"],
+        ["xpath=//button[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Розмір')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68948a2a-bfbf-4642-a289-4e0583e2caf6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-pill:nth-child(3) font > font",
+      "targets": [
+        ["css=.plp-pill:nth-child(3) font > font", "css:finder"],
+        ["xpath=//button[3]/span/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a89f502-4084-4b71-906e-5957169b2471",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-checkbox__wrapper--90x200 .plp-checkbox__symbol",
+      "targets": [
+        ["css=.plp-checkbox__wrapper--90x200 .plp-checkbox__symbol", "css:finder"],
+        ["xpath=//div[@id='SEC_filter-REFERENCE_MEASUREMENTS']/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/label[2]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f62a53f9-9206-46c8-9b1a-90231c4a83ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-btn__label > span",
+      "targets": [
+        ["css=.plp-btn__label > span", "css:finder"],
+        ["xpath=//span/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbf6267b-2fdd-41b0-84e3-2d94d52e4df5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(4) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(4) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/stranda-rama-lozka-z-pojemnikiem-zaglowek-granatowy__0893451_PE782308_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[4]/div/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e147d1e-4773-4f15-9e71-f7ebf7705cb3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/stranda-rama-lozka-z-pojemnikiem-zaglowek-granatowy__0893451_PE782308_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[2]/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a24c2e0-fcbb-4fac-a7d1-a4a4a124c5f5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(4) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(4) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/stranda-rama-lozka-z-pojemnikiem-zaglowek-granatowy__0893451_PE782308_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[4]/div/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97123a52-cb4f-40dd-9dda-5cf3893ad667",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/stranda-rama-lozka-z-pojemnikiem-zaglowek-granatowy__0893451_PE782308_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[2]/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef9694ca-bee0-45e8-aeee-99edf59acbc9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/slaekt-rama-lozka-z-szufladami-bialy__0737507_PE726512_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96b15d8d-8e17-4587-ae06-960d85a11835",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/slaekt-rama-lozka-z-szufladami-bialy__0737507_PE726512_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[2]/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a596e1f-d342-40cf-93f1-7c5e1da624cb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/slaekt-rama-lozka-z-szufladami-bialy__0737507_PE726512_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4523b14-0514-42ef-8fbc-dd4780c6ad33",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,285)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be520891-e423-4428-9a24-7ea39df577b3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/slaekt-rama-lozka-z-szufladami-bialy__0737507_PE726512_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[2]/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb710344-48b6-4a13-9715-0c241bd194ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-btn",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fa0eb04-80c1-430f-ba5e-ffb6ca78bc3b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a43b201-b5c5-4a52-9a23-a00c3686263e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(6) .range-revamp-toggle-button",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(6) .range-revamp-toggle-button", "css:finder"],
+        ["xpath=//div[6]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f37a142-7b0e-438b-9fd4-9875016d504f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-toggle-button",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-toggle-button", "css:finder"],
+        ["xpath=//div[6]/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44585b16-db09-402e-913c-831257a33e46",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(6) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(6) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/oteren-lezanka-szary__0584977_PE671727_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[6]/div/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "996c1677-baa7-4b49-8a8c-e08c1549c9b4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image",
+      "targets": [
+        ["css=.plp-product-list__fragment:nth-child(2) .range-revamp-product-compact__image-hover > .range-revamp-aspect-ratio-image__image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/pl/pl/images/products/oteren-lezanka-szary__0584977_PE671727_S5.JPG?f=xxs')]", "xpath:img"],
+        ["xpath=//div[2]/div/a/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "95a74a48-8d6e-4be8-98fc-fc1bda1feaf2",
+    "name": "Test 3",
+    "commands": [{
+      "id": "e98b71bd-12f2-49a1-bdd0-7a83dfb89d0d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/pl/pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca57ea47-ca7f-4fd4-88c1-b0566eb577f4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d05d3642-9540-444d-927d-e4dd0008f449",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f80be19-dd82-477b-8020-e5c54c55b79e",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "lustigt"
+    }, {
+      "id": "3ece5b21-479b-436c-8c35-fefb77d64d67",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "76f662c3-067a-435d-8025-1b4e89ec2eea",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,219)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ff28d7d-60ca-4e23-9b78-81df96ba0d48",
+      "comment": "",
+      "command": "click",
+      "target": "css=.serp-grid__item:nth-child(1) .range-revamp-btn",
+      "targets": [
+        ["css=.serp-grid__item:nth-child(1) .range-revamp-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='search-results']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de633783-86e5-4863-aad3-091f69a3c449",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.range-revamp-product-compact__add-to-cart-button--visible",
+      "targets": [
+        ["css=.range-revamp-product-compact__add-to-cart-button--visible", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='search-results']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85a045cf-480c-478c-b8ba-30c40fad463a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.range-revamp-product-compact__add-to-cart-button--visible",
+      "targets": [
+        ["css=.range-revamp-product-compact__add-to-cart-button--visible", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='search-results']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "23da1c68-19e3-43ce-855d-71d768f73e45",
+    "name": "Test 4",
+    "commands": [{
+      "id": "4df57fe0-5549-4dad-b0ed-e68e51ba0f8b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/pl/pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b33b5fd2-05ae-4a57-aef7-ea62f588d449",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c32086b-66c6-4bed-adec-44c8dc74d663",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-header__nav__main font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main font > font", "css:finder"],
+        ["xpath=//li[4]/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fafcb635-67a0-4c7c-9f5d-374d3a661a21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__nav__main > li:nth-child(4) font > font",
+      "targets": [
+        ["css=.hnf-header__nav__main > li:nth-child(4) font > font", "css:finder"],
+        ["xpath=//li[4]/a/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb3f6c1b-cfc8-48fe-a1c8-34bef58033f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-revamp-fragment-wrapper:nth-child(1) .range-revamp-header-section__title--small:nth-child(1) > font:nth-child(1) > font:nth-child(1)",
+      "targets": [
+        ["css=.plp-revamp-fragment-wrapper:nth-child(1) .range-revamp-header-section__title--small:nth-child(1) > font:nth-child(1) > font:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='gotowanieiserwowanie']/div/div/div/div/div/div/a/div/div/div/div/font/font", "xpath:idRelative"],
+        ["xpath=//div/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ca77077-2d2d-4aec-b826-6dd3fa821b57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.range-revamp-btn__label:nth-child(1) > font > font",
+      "targets": [
+        ["css=.range-revamp-btn__label:nth-child(1) > font > font", "css:finder"],
+        ["xpath=//main[@id='content']/div/div/div/div[2]/div[3]/div/div[2]/div/div/button/span/span/span/font/font", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/span/span/span/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5b4a0d1-8b7c-4ca1-b633-016d95426098",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.range-revamp-btn--emphasised",
+      "targets": [
+        ["css=.range-revamp-btn--emphasised", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//main[@id='content']/div/div/div/div[2]/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Loading…')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "122833c0-df73-4ddd-91f9-c1e6a938f33a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.range-revamp-btn--emphasised",
+      "targets": [
+        ["css=.range-revamp-btn--emphasised", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//main[@id='content']/div/div/div/div[2]/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'додати в кошикDodano')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ce4f6d5e-88d3-4e94-9ae9-eb7eaa620dfa",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.ikea.com/", "https://www.ikea.com/pl/pl/"],
+  "plugins": []
+}
