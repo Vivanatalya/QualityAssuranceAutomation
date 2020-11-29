@@ -1,0 +1,25 @@
+TC-04
+
+1. Navigate to https://www.ikea.com/pl/pl/
+
+2. Click on button "вироби до 20,0" in navigate menu  
+
+//body/header/div/div/div/nav/ul/li[4]/a
+//body/header/div/div/div/nav/ul/li[last()]/a
+
+//header/div/div/div/nav/ul/li[4]/a
+//header/div/div/div/nav/ul/li[last()]/a
+
+//div/div/nav/ul/li[4]/a
+//div/div/nav/ul/li[last()]/a
+
+[class=hnf-header__nav] ul li a
+
+3. Click on first pink cup 
+
+//div[@data-ref-id='30424012']
+
+4. Adds this to basket
+
+//button[arial-label='додати в кошик']/span 
+
