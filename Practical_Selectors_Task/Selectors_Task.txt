@@ -1,25 +1,39 @@
-TC-04
-
+TC-01
 1. Navigate to https://www.ikea.com/pl/pl/
+2. Click on "продукти" //header/div/div/div/nav/ul/li[last()-3]/a
+3. Choose "Ліжка і матраси" //aside/div[last()-1]/nav[last()-5]/ul/li[last()-20]
+4. Choose "Ліжка" //aside/div[last()-1]/nav[last()-5]/ul/li[last()-20]/nav/ul/li[last()-9]
+5. Choose "ліжка з контейнерами" //div[@class='vn-carousel']/div/nav/a[last()-9]
 
+TC-02
+1. Navigate to https://www.ikea.com/pl/pl/
+2. Click on "продукти" //header/div/div/div/nav/ul/li[last()-3]/a
+3. Choose "Ліжка і матраси" //aside/div[last()-1]/nav[last()-5]/ul/li[last()-20]
+4. Choose "Ліжка" //aside/div[last()-1]/nav[last()-5]/ul/li[last()-20]/nav/ul/li[last()-9]
+
+TC-03
+1. Navigate to https://www.ikea.com/pl/pl/
+2. Click on searchbar //button[@id='search-box__visualsearch']  [id='search-box__visualsearch']
+3. Choose "lustigt настінна полиця"  [data-product-number='30381852'] 
+
+
+TC-04
+1. Navigate to https://www.ikea.com/pl/pl/
 2. Click on button "вироби до 20,0" in navigate menu  
+  //body/header/div/div/div/nav/ul/li[4]/a
+  //body/header/div/div/div/nav/ul/li[last()]/a
+  //header/div/div/div/nav/ul/li[4]/a
+  //header/div/div/div/nav/ul/li[last()]/a
+  //div/div/nav/ul/li[4]/a
+  //div/div/nav/ul/li[last()]/a  [class=hnf-header__nav] ul li a
+3. Click on first pink cup  //div[@data-ref-id='30424012']
+4. Adds this to basket  //button[arial-label='додати в кошик']/span (fail)
 
-//body/header/div/div/div/nav/ul/li[4]/a
-//body/header/div/div/div/nav/ul/li[last()]/a
+TC-05
+1. Navigate to https://www.ikea.com/pl/pl/
+2. Click on button "Центр дизайну інтер"єру" in navigate menu  //div/div/nav/ul/li[last()-1]/a
+3. Scroll down and choose "Кухня" in 'Виберіть кімнату, яку хочете спроектувати'  //section/div/div/div/a[last()-5]/span
+4. In "Шукаєте більше натхнення?" click on "дивіться галерею"  //article/section[last()]/div/div/div/div/div/div/a/span
 
-//header/div/div/div/nav/ul/li[4]/a
-//header/div/div/div/nav/ul/li[last()]/a
 
-//div/div/nav/ul/li[4]/a
-//div/div/nav/ul/li[last()]/a
-
-[class=hnf-header__nav] ul li a
-
-3. Click on first pink cup 
-
-//div[@data-ref-id='30424012']
-
-4. Adds this to basket
-
-//button[arial-label='додати в кошик']/span 
 
