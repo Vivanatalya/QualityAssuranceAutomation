@@ -1,4 +1,4 @@
-package com.qa_project_nromanchuk_2020;
+package com.atqa2020nromanchuk;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,8 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SampleTest {
-
+public class FirstWebTests {
     private RemoteWebDriver driver;
 
     @BeforeMethod
@@ -27,8 +26,6 @@ public class SampleTest {
 
     @Test(priority = 0, suiteName = "main")
     public void mainUrlTest() {
-
-
 
         //Given user opens a browser and provides a valid url
         driver.get("https://google.com");
