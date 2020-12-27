@@ -14,7 +14,7 @@ TC-02
 TC-03
 1. Navigate to https://www.ikea.com/pl/pl/
 2. Click on searchbar //button[@id='search-box__visualsearch']  [id='search-box__visualsearch']
-3. Choose "lustigt настінна полиця"  [data-product-number='30381852'] 
+3. Choose "lustigt настінна полиця"  [data-product-number='30381852'] LUSTIGT Półka ścienna
 
 
 TC-04
