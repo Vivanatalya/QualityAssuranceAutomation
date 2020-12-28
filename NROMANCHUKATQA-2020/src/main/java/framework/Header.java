@@ -6,8 +6,8 @@ import pages.Page;
 
 public class Header {
 
+    // private  MainMenu mainMenu;
     protected RemoteWebDriver driver;
-
 
     private String searchFieldLocator = "//input";
     private String searchButtonLocator = "//span/button[@id='search-box__searchbutton']";
@@ -17,8 +17,13 @@ public class Header {
 
     private String designInteriorCentreButtonLocator = "//header/div/div/div/nav/ul/li[3]/a";
 
+    private String productsLowerTwentyButtonLocator = "//body/aside/div[2]/nav[2]/ul/li[3]/a";
+
+
+    // private MainMenu mainMenu =new MainMenu(driver);
     public Header(RemoteWebDriver driver) {
         this.driver = driver;
+
     }
 
     public Header setSearchTerm(String searchTerm) {
@@ -32,11 +37,6 @@ public class Header {
     }
 
 
-    public Header clickOnProductsMenuButton() throws Exception {
-        driver.findElement(By.xpath(productsButtonLocator)).click();
-        return this;
-    }
-
     public <T extends Page> T navigateNewLowerPricesPage(Class<T> clazz) throws Exception {
         driver.findElement(By.xpath(newLowerPricesLinkLocator)).click();
         return PageFactory.newPage(driver, clazz);
@@ -46,5 +46,15 @@ public class Header {
         driver.findElement(By.xpath(designInteriorCentreButtonLocator)).click();
         return PageFactory.newPage(driver, clazz);
 
+    }
+
+    public Header clickOnProductsMenuButton() {
+        driver.findElement(By.xpath(productsButtonLocator)).click();
+        return this;
+    }
+
+    public <T extends Page> T navigateProductsLowerTwenty(Class<T> clazz) throws Exception{
+        driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
+        return PageFactory.newPage(driver,clazz);
     }
 }

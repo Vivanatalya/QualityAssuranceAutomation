@@ -1,10 +1,14 @@
 import com.atqa2020nromanchuk.BaseTest;
+import framework.Header;
+import framework.MainMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
+
+import java.util.PriorityQueue;
 
 public class FirstWebTests {
 
@@ -19,6 +23,12 @@ public class FirstWebTests {
     private NewLowerPricesPage newLowerPricesPage;
     private DesignInteriorCentrePage designInteriorCentrePage;
     private KitchenPage kitchenPage;
+    private GalleryPage galleryPage;
+    private ProductsLowerTwenty productsLowerTwenty;
+    private MainMenu mainMenu;
+    private Header header;
+
+    private String productsButtonLocator = "//nav[@class='hnf-header__nav']/ul/li[1]/a";
 
     @BeforeMethod
     public void setup() {
@@ -63,10 +73,27 @@ public class FirstWebTests {
 
         //When user clicks on "design interior centre" button and redirecting to design interior page
         designInteriorCentrePage = homePage.navigateToDesignInteriorCentrePage(DesignInteriorCentrePage.class);
-        
+
         //And clicks on 'kitchen' button and redirecting to kitchen page
         kitchenPage = designInteriorCentrePage.clickOnKitchenButton(KitchenPage.class);
         //Then user can see page whith searching result
+        galleryPage=kitchenPage.clickOnGalleryButton(GalleryPage.class);
+    }
+
+    @Test(priority = 3, suiteName = "main")
+    public void BaySpoonsTest() throws Exception {
+
+        //Given user opens a browser and provides a valid url
+
+        //When user clicks on "products" button and then click on "products lower twenty"
+        driver.findElement(By.xpath(productsButtonLocator)).click();
+
+        productsLowerTwenty=header.navigateProductsLowerTwenty(ProductsLowerTwenty.class);
+       // driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
+        //And user can see "products lower twenty" page and click on first position with spoons
+       // driver.findElement(By.xpath(spoonsLinkLocator)).click();
+        //Then user can adds spoons to basket
+       // driver.findElement(By.xpath(koshykLocator)).click();
     }
 
 }

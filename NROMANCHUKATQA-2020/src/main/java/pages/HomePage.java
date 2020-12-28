@@ -25,10 +25,12 @@ public class HomePage extends Page {
 
 
     public <T extends Page> T navigateToNewLowerPricesPage(Class<T> clazz) throws Exception {
-       return header.clickOnProductsMenuButton().navigateNewLowerPricesPage(clazz);
+        return header.clickOnProductsMenuButton().navigateNewLowerPricesPage(clazz);
 
     }
-    public <T extends Page> T navigateToDesignInteriorCentrePage(Class<T> clazz) throws Exception{
+
+    public <T extends Page> T navigateToDesignInteriorCentrePage(Class<T> clazz) throws Exception {
         return header.clickOnDesignInteriorCentreButton(clazz);
     }
+
 }

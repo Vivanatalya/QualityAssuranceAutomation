@@ -18,7 +18,11 @@ public class SimpleTest extends BaseTest {
     private String designInteriorCentreButtonLocator = "//header/div/div/div/nav/ul/li[3]/a";
     private String acceptButtonLocator = "//button[@id='onetrust-accept-btn-handler']";
     private String kitchenButtonLocator = "//div[@class='carousel__body-wrapper']/div/div[1]/button";
-    private String galleryButtonLocator="//*[@id=\"ea03b70f-28d1-11eb-886e-1db5641597a2\"]/div/div[2]/div/div/a/span";
+    private String galleryButtonLocator = "//*[@id=\"ea03b70f-28d1-11eb-886e-1db5641597a2\"]/div/div[2]/div/div/a/span";
+
+    private String productsLowerTwentyButtonLocator = "//body/aside/div[2]/nav[2]/ul/li[3]/a";
+    private String spoonsLinkLocator = "//*[@id=\"akcesoriadladzieci\"]/div/div/div[1]/div/div/a";
+    private String koshykLocator = "//*[@id=\"content\"]/div/div/div/div[2]/div[3]/div/div[2]/div/div/button/span";
 
 
     @BeforeMethod(alwaysRun = true)
@@ -75,6 +79,19 @@ public class SimpleTest extends BaseTest {
         //Then user clicks on "gallery" button and user can see Gallery page
         driver.findElement(By.xpath(galleryButtonLocator)).click();
 
+    }
+
+    @Test(priority = 3, suiteName = "main")
+    public void BaySpoonsTest() throws Exception {
+
+        //Given user opens a browser and provides a valid url
+        //When user clicks on "products" button and then click on "products lower twenty"
+        driver.findElement(By.xpath(productsButtonLocator)).click();
+        driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
+        //And user can see "products lower twenty" page and click on first position with spoons
+        driver.findElement(By.xpath(spoonsLinkLocator)).click();
+        //Then user can adds spoons to basket
+        driver.findElement(By.xpath(koshykLocator)).click();
     }
 }
 
