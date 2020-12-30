@@ -3,6 +3,7 @@ package framework;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.Page;
+import pages.ProductsLowerTwenty;
 
 public class Header {
 
@@ -53,8 +54,9 @@ public class Header {
         return this;
     }
 
-    public <T extends Page> T navigateProductsLowerTwenty(Class<T> clazz) throws Exception{
+    public <T extends Page> T navigateProductsLowerTwenty(Class<T> clazz) throws Exception {
         driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
-        return PageFactory.newPage(driver,clazz);
+        return PageFactory.newPage(driver, clazz);
     }
+
 }

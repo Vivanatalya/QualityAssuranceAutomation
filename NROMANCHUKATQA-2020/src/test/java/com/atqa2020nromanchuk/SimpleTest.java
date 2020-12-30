@@ -22,7 +22,7 @@ public class SimpleTest extends BaseTest {
 
     private String productsLowerTwentyButtonLocator = "//body/aside/div[2]/nav[2]/ul/li[3]/a";
     private String spoonsLinkLocator = "//*[@id=\"akcesoriadladzieci\"]/div/div/div[1]/div/div/a";
-    private String koshykLocator = "//*[@id=\"content\"]/div/div/div/div[2]/div[3]/div/div[2]/div/div/button/span";
+    private String basketLocator = "//*[@id=\"content\"]/div/div/div/div[2]/div[3]/div/div[2]/div/div/button/span";
 
 
     @BeforeMethod(alwaysRun = true)
@@ -91,7 +91,7 @@ public class SimpleTest extends BaseTest {
         //And user can see "products lower twenty" page and click on first position with spoons
         driver.findElement(By.xpath(spoonsLinkLocator)).click();
         //Then user can adds spoons to basket
-        driver.findElement(By.xpath(koshykLocator)).click();
+        driver.findElement(By.xpath(basketLocator)).click();
     }
 }
 

@@ -4,6 +4,7 @@ import framework.MainMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
@@ -14,6 +15,9 @@ public class FirstWebTests {
 
 //    private java.lang.String bedsAndMatracesNavigateButton = "//a[contains(text(),'Łóżka i materace')]";
 //    private String acceptButton = "//button[contains(text(),'Akceptuj')]";
+
+    private static String WALLSHELF_PAGE_TITLE="Wyświetlanie wyników dla LUSTIGT Półka ścienna";
+
 
     private RemoteWebDriver driver;
     private String acceptButtonLocator = "//button[@id='onetrust-accept-btn-handler']";
@@ -30,16 +34,15 @@ public class FirstWebTests {
 
     private String productsButtonLocator = "//nav[@class='hnf-header__nav']/ul/li[1]/a";
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-        driver = new ChromeDriver();
+       driver = new ChromeDriver();
         driver.get(" https://www.ikea.com/pl/pl/");
         driver.manage().window().maximize();
         if (driver.findElement(By.xpath(acceptButtonLocator)).isDisplayed()) {
             driver.findElement(By.xpath(acceptButtonLocator)).click();
         }
-        //driver.manage().window().maximize();
         System.out.println("setup sample test");
 
         homePage = new HomePage(driver);
@@ -54,6 +57,8 @@ public class FirstWebTests {
 
         //Then user can see page whith searching result
         wallShelfPage = homePage.searchForItem(WallShelfPage.class, searchTerm);
+        Assert.assertTrue(wallShelfPage.isSearchTermValid(searchTerm),"Title is not correct!!!");
+        //System.out.println("Inside test");
     }
 
     @Test(priority = 1, suiteName = "main")
@@ -65,6 +70,7 @@ public class FirstWebTests {
 
         //Then user can see page whith searching result
         newLowerPricesPage = homePage.navigateToNewLowerPricesPage(NewLowerPricesPage.class);
+        Assert.assertTrue(newLowerPricesPage.isTitleCorrect(),"Title is not correct!!!");
     }
 
     @Test(priority = 2, suiteName = "main")
@@ -89,7 +95,6 @@ public class FirstWebTests {
         driver.findElement(By.xpath(productsButtonLocator)).click();
 
         productsLowerTwenty=header.navigateProductsLowerTwenty(ProductsLowerTwenty.class);
-       // driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
         //And user can see "products lower twenty" page and click on first position with spoons
        // driver.findElement(By.xpath(spoonsLinkLocator)).click();
         //Then user can adds spoons to basket

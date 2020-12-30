@@ -27,6 +27,8 @@ TC-04
   //div/div/nav/ul/li[4]/a
   //div/div/nav/ul/li[last()]/a  [class=hnf-header__nav] ul li a
 3. Click on first pink cup  //div[@data-ref-id='30424012']
+
+//*[@id="akcesoriadladzieci"]/div/div/div[1]/div/div/a
 4. Adds this to basket  //button[arial-label='додати в кошик']/span (fail)
 
 TC-05
