@@ -1,5 +1,6 @@
-package com.atqa2020nromanchuk;
+package com.atqa2020nromanchuk.journeys;
 
+import com.atqa2020nromanchuk.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
