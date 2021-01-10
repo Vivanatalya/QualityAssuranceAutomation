@@ -1,6 +1,6 @@
-package pages;
+package com.atqa2020nromanchuk.pages;
 
-import framework.PageFactory;
+import com.atqa2020nromanchuk.framework.PageFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 

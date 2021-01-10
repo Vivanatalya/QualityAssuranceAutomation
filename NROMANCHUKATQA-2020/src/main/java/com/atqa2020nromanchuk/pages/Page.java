@@ -1,8 +1,7 @@
-package pages;
+package com.atqa2020nromanchuk.pages;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.RemoteWebDriverBuilder;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class Page {
@@ -10,8 +9,8 @@ public abstract class Page {
     protected WebDriverWait wait;
 
     public Page(final RemoteWebDriver driver) {
-        this.driver=driver;
-        this.wait=new WebDriverWait(driver,30);
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, 30);
     }
 
 }

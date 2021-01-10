@@ -1,7 +1,8 @@
-package pages;
+package com.atqa2020nromanchuk.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import com.atqa2020nromanchuk.pages.Page;
 
 public class NewLowerPricesPage extends Page {
 

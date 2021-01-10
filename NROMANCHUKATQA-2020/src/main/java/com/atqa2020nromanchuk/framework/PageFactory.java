@@ -1,8 +1,7 @@
-package framework;
+package com.atqa2020nromanchuk.framework;
 
+import com.atqa2020nromanchuk.pages.Page;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.Page;
-
 import java.lang.reflect.Constructor;
 
 public class PageFactory {

@@ -1,10 +1,12 @@
-package pages;
+package com.atqa2020nromanchuk.pages;
 
-import framework.PageFactory;
+
+import com.atqa2020nromanchuk.framework.PageFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import com.atqa2020nromanchuk.pages.Page;
 
-public class KitchenPage extends Page{
+public class KitchenPage extends Page {
 
     private String galleryButtonLocator="//*[@id=\"ea03b70f-28d1-11eb-886e-1db5641597a2\"]/div/div[2]/div/div/a/span";
 

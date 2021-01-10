@@ -1,4 +1,4 @@
-package framework;
+package com.atqa2020nromanchuk.framework;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 

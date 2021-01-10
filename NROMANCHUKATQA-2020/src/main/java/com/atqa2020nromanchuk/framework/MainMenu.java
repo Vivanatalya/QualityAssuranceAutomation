@@ -1,8 +1,8 @@
-package framework;
+package com.atqa2020nromanchuk.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.Page;
+import com.atqa2020nromanchuk.pages.Page;
 
 public class MainMenu {
 

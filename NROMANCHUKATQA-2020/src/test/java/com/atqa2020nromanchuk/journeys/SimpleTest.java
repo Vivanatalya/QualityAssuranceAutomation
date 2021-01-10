@@ -1,5 +1,6 @@
 package com.atqa2020nromanchuk.journeys;
 
+
 import com.atqa2020nromanchuk.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,7 +23,7 @@ public class SimpleTest extends BaseTest {
     private String galleryButtonLocator = "//*[@id=\"ea03b70f-28d1-11eb-886e-1db5641597a2\"]/div/div[2]/div/div/a/span";
 
     private String productsLowerTwentyButtonLocator = "//body/aside/div[2]/nav[2]/ul/li[3]/a";
-    private String spoonsLinkLocator = "//*[@id=\"akcesoriadladzieci\"]/div/div/div[1]/div/div/a";
+    private String spoonsLinkLocator = "//div[@class='range-revamp-product-compact']/a[@aria-label='Kalas lyzka']";
     private String basketLocator = "//*[@id=\"content\"]/div/div/div/div[2]/div[3]/div/div[2]/div/div/button/span";
 
 
@@ -90,9 +91,9 @@ public class SimpleTest extends BaseTest {
         driver.findElement(By.xpath(productsButtonLocator)).click();
         driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
         //And user can see "products lower twenty" page and click on first position with spoons
-        driver.findElement(By.xpath(spoonsLinkLocator)).click();
+       // driver.findElement(By.xpath(spoonsLinkLocator)).click();
         //Then user can adds spoons to basket
-        driver.findElement(By.xpath(basketLocator)).click();
+        //driver.findElement(By.xpath(basketLocator)).click();
     }
 }
 

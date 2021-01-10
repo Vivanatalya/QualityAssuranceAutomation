@@ -1,68 +1,63 @@
 package com.atqa2020nromanchuk.journeys;
 
 import com.atqa2020nromanchuk.BaseTest;
+import com.atqa2020nromanchuk.framework.Header;
+import com.atqa2020nromanchuk.framework.SearchTermsDataProvider;
 import com.atqa2020nromanchuk.listeners.TestListener;
-import com.sun.xml.internal.ws.server.ServerRtException;
-import framework.Header;
-import framework.MainMenu;
+import com.atqa2020nromanchuk.pages.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.*;
-
-import java.util.PriorityQueue;
 
 @Listeners(TestListener.class)
 public class FirstWebTests extends BaseTest {
 
-    //    private java.lang.String bedsAndMatracesNavigateButton = "//a[contains(text(),'Łóżka i materace')]";
-    private String acceptButton = "//button[contains(text(),'Akceptuj')]";
-
-    private static String WALLSHELF_PAGE_TITLE = "Wyświetlanie wyników dla LUSTIGT Półka ścienna";
-
-    private RemoteWebDriver driver;
-    private String acceptButtonLocator = "";
-            //div[@class='banner-actions-container']/button[@id='onetrust-accept-btn-handler']";
-  //  <button id="onetrust-pc-btn-handler" tabindex="0">Ustawienia cookies</button>
-    // onetrust-pc-btn-handler
-  //button[@id='onetrust-accept-btn-handler']";
-    //onetrust-accept-btn-handler
-    private String acceptButtonsGroupLocator = "//div[@id='onetrust-button-group']";
     private HomePage homePage;
-    private String searchTerm = "LUSTIGT Półka ścienna";
     private WallShelfPage wallShelfPage;
+    private SearchResultPage searchResultPage;
+    private KitchenPage kitchenPage;
     private NewLowerPricesPage newLowerPricesPage;
     private DesignInteriorCentrePage designInteriorCentrePage;
-    private KitchenPage kitchenPage;
+    private String oneSearchTerm = "LUSTIGT Półka ścienna";
+    private String acceptButtonLocator = "//button[@id='onetrust-accept-btn-handler']";
+
+    private static String WALLSHELF_PAGE_TITLE = "Wyświetlanie wyników dla LUSTIGT Półka ścienna";
+    private RemoteWebDriver driver;
+    private ProductsLowerTwentyPage productsLowerTwentyPage;
     private GalleryPage galleryPage;
-    private ProductsLowerTwenty productsLowerTwenty;
-    private MainMenu mainMenu;
     private Header header;
     private String productsButtonLocator = "//nav[@class='hnf-header__nav']/ul/li[1]/a";
 
     @BeforeMethod(alwaysRun = true)
-    public void setup() {
+    public void setupTest() {
+
+        //TODO: 09.01.2021 move it to the BaseTest.java................
         System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        this.wait = new WebDriverWait(driver, 10);
         driver.get(getMainUrl());
-        System.out.println("setup first Web tests");
-        homePage = new HomePage(driver);
+        // ............................................................
 
-        if (driver.findElement(By.xpath(acceptButton)).isDisplayed()) {
-            System.out.println("accept finded");
-            driver.findElement(By.xpath(acceptButton)).click();
+        if (isElementDisplayed(By.xpath(acceptButtonLocator))) {
+            driver.findElement(By.xpath(acceptButtonLocator)).click();
         }
-        System.out.println("setup accept coocies");
-
-
+        homePage = new HomePage(driver);
     }
 
-    @Test(priority = 0, suiteName = "main")
+    @DataProvider(name = "getSearchTerms")
+    public Object[][] getSearchTerms() {
+        return SearchTermsDataProvider.getAllSearchTerms();
+    }
+
+    @Test(groups = "main", suiteName = "ui")
     public void SearchTest() throws Exception {
 
         //Given user opens a browser and provides a valid url
@@ -70,9 +65,23 @@ public class FirstWebTests extends BaseTest {
         //When user provides a search term "LUSTIGT Półka ścienna" and clicks on search button
 
         //Then user can see page whith searching result
-        wallShelfPage = homePage.searchForItem(WallShelfPage.class, searchTerm);
-        Assert.assertTrue(wallShelfPage.isSearchTermValid(searchTerm), "Title is not correct!!!");
-        //System.out.println("Inside test");
+        wallShelfPage = homePage.searchForItem(WallShelfPage.class, oneSearchTerm);
+
+        Assert.assertTrue(wallShelfPage.isSearchTermValid(oneSearchTerm), "Title is not correct!!!");
+
+    }
+
+    @Test(groups = "main", dataProvider = "getSearchTerms")
+    public void searchTestUsingDataProvider(String searchTerm) throws Exception {
+
+        //Given user opens a browser and provides a valid url
+
+        //When user provides a search term from enum file and clicks on search button
+        searchResultPage = homePage.searchForItem(SearchResultPage.class, searchTerm);
+        //And checks for cookies
+        chekForCookies();
+        //Then title on the results page contains search term
+        Assert.assertTrue(searchResultPage.isSearchTermValid(searchTerm), "Search term is not valid!");
     }
 
     @Test(priority = 1, suiteName = "main")
@@ -100,19 +109,37 @@ public class FirstWebTests extends BaseTest {
         galleryPage = kitchenPage.clickOnGalleryButton(GalleryPage.class);
     }
 
-    @Test(priority = 3, suiteName = "main")
-    public void BaySpoonsTest() throws Exception {
+    // todo: make the test work
+//
+//    @Test(priority = 3, suiteName = "main")
+//    public void BaySpoonsTest() throws Exception {
+//
+//        //Given user opens a browser and provides a valid url
+//
+//        //When user clicks on "products" button and then click on "products lower twenty"
+//        driver.findElement(By.xpath(productsButtonLocator)).click();
+//
+//        productsLowerTwentyPage = header.navigateProductsLowerTwenty(ProductsLowerTwentyPage.class);
+//        //And user can see "products lower twenty" page and click on first position with spoons
+//        // driver.findElement(By.xpath(spoonsLinkLocator)).click();
+//        //Then user can adds spoons to basket
+//        // driver.findElement(By.xpath(koshykLocator)).click();
+//    }
 
-        //Given user opens a browser and provides a valid url
+    // TODO: 09.01.2021 move it to the BaseTest.java
+    protected boolean isElementDisplayed(By selector) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
+            return driver.findElement(selector).isDisplayed();
+        } catch (Exception ex) {
+            return false;
+        }
+    }
 
-        //When user clicks on "products" button and then click on "products lower twenty"
-        driver.findElement(By.xpath(productsButtonLocator)).click();
-
-        productsLowerTwenty = header.navigateProductsLowerTwenty(ProductsLowerTwenty.class);
-        //And user can see "products lower twenty" page and click on first position with spoons
-        // driver.findElement(By.xpath(spoonsLinkLocator)).click();
-        //Then user can adds spoons to basket
-        // driver.findElement(By.xpath(koshykLocator)).click();
+    public void chekForCookies() {
+        if (isElementDisplayed(By.xpath(acceptButtonLocator))) {
+            driver.findElement(By.xpath(acceptButtonLocator)).click();
+        }
     }
 
 }

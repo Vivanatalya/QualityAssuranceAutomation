@@ -1,9 +1,9 @@
-package framework;
+package com.atqa2020nromanchuk.framework;
 
+import com.atqa2020nromanchuk.pages.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.Page;
-import pages.ProductsLowerTwenty;
+
 
 public class Header {
 
