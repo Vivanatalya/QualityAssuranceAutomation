@@ -28,11 +28,13 @@ public class FirstWebTests extends BaseTest {
     private String oneSearchTerm = "LUSTIGT Półka ścienna";
     private String acceptButtonLocator = "//button[@id='onetrust-accept-btn-handler']";
 
+    //TODO this should be declared on the corresponding page
     private static String WALLSHELF_PAGE_TITLE = "Wyświetlanie wyników dla LUSTIGT Półka ścienna";
     private RemoteWebDriver driver;
     private ProductsLowerTwentyPage productsLowerTwentyPage;
     private GalleryPage galleryPage;
     private Header header;
+    //TODO this should be declared on the corresponding page
     private String productsButtonLocator = "//nav[@class='hnf-header__nav']/ul/li[1]/a";
 
     @BeforeMethod(alwaysRun = true)
@@ -79,12 +81,14 @@ public class FirstWebTests extends BaseTest {
         //When user provides a search term from enum file and clicks on search button
         searchResultPage = homePage.searchForItem(SearchResultPage.class, searchTerm);
         //And checks for cookies
+        //TODO misspel in method name
         chekForCookies();
         //Then title on the results page contains search term
         Assert.assertTrue(searchResultPage.isSearchTermValid(searchTerm), "Search term is not valid!");
     }
 
     @Test(priority = 1, suiteName = "main")
+    //TODO please apply camel case naming format for the test method
     public void NewLowerPricesTest() throws Exception {
 
         //Given user opens a browser and provides a valid url
@@ -97,6 +101,7 @@ public class FirstWebTests extends BaseTest {
     }
 
     @Test(priority = 2, suiteName = "main")
+    //TODO please apply camel case naming format for the test method
     public void GalleryTest() throws Exception {
         //Given user opens a browser and provides a valid url
 
@@ -107,6 +112,7 @@ public class FirstWebTests extends BaseTest {
         kitchenPage = designInteriorCentrePage.clickOnKitchenButton(KitchenPage.class);
         //Then user can see page whith searching result
         galleryPage = kitchenPage.clickOnGalleryButton(GalleryPage.class);
+        //TODO this test is missing Assert and therefore doesn't check anything, please add Assert here
     }
 
     // todo: make the test work
@@ -136,6 +142,7 @@ public class FirstWebTests extends BaseTest {
         }
     }
 
+    //TODO if we're checking for cookies only in this class then make this method private
     public void chekForCookies() {
         if (isElementDisplayed(By.xpath(acceptButtonLocator))) {
             driver.findElement(By.xpath(acceptButtonLocator)).click();
