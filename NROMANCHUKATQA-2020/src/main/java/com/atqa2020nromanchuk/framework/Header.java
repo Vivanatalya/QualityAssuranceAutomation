@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Header {
 
+    //TODO please remove those redundant spaces between variable declaration and throughout the class were required
     // private  MainMenu mainMenu;
     protected RemoteWebDriver driver;
 
