@@ -29,6 +29,7 @@ public abstract class BaseTest {
         loadPropertiesFromFile(DEFAULT_ENV_PROPERTIES_FILE_PATH);
     }
 
+    //TODO if we're not using this method then we need to remove it altogether
     @BeforeMethod(alwaysRun = true)
     public void setup() {
 //        System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
