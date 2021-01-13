@@ -81,15 +81,13 @@ public class FirstWebTests extends BaseTest {
         //When user provides a search term from enum file and clicks on search button
         searchResultPage = homePage.searchForItem(SearchResultPage.class, searchTerm);
         //And checks for cookies
-        //TODO misspel in method name
-        chekForCookies();
+        checkForCookies();
         //Then title on the results page contains search term
         Assert.assertTrue(searchResultPage.isSearchTermValid(searchTerm), "Search term is not valid!");
     }
 
     @Test(priority = 1, suiteName = "main")
-    //TODO please apply camel case naming format for the test method
-    public void NewLowerPricesTest() throws Exception {
+    public void newLowerPricesTest() throws Exception {
 
         //Given user opens a browser and provides a valid url
 
@@ -101,8 +99,7 @@ public class FirstWebTests extends BaseTest {
     }
 
     @Test(priority = 2, suiteName = "main")
-    //TODO please apply camel case naming format for the test method
-    public void GalleryTest() throws Exception {
+    public void galleryTest() throws Exception {
         //Given user opens a browser and provides a valid url
 
         //When user clicks on "design interior centre" button and redirecting to design interior page
@@ -142,8 +139,8 @@ public class FirstWebTests extends BaseTest {
         }
     }
 
-    //TODO if we're checking for cookies only in this class then make this method private
-    public void chekForCookies() {
+    // if we're checking for cookies only in this class then make this method private
+    private void checkForCookies() {
         if (isElementDisplayed(By.xpath(acceptButtonLocator))) {
             driver.findElement(By.xpath(acceptButtonLocator)).click();
         }

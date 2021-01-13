@@ -6,26 +6,16 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class Header {
-
-    //TODO please remove those redundant spaces between variable declaration and throughout the class were required
-    // private  MainMenu mainMenu;
     protected RemoteWebDriver driver;
-
     private String searchFieldLocator = "//input";
     private String searchButtonLocator = "//span/button[@id='search-box__searchbutton']";
-
     private String productsButtonLocator = "//header/div/div/div/nav/ul/li[1]/a";
     private String newLowerPricesLinkLocator = "//body/aside/div[2]/nav[@class='hnf-menu__nav2']/ul/li[2]/a";
-
     private String designInteriorCentreButtonLocator = "//header/div/div/div/nav/ul/li[3]/a";
-
     private String productsLowerTwentyButtonLocator = "//body/aside/div[2]/nav[2]/ul/li[3]/a";
 
-
-    // private MainMenu mainMenu =new MainMenu(driver);
     public Header(RemoteWebDriver driver) {
         this.driver = driver;
-
     }
 
     public Header setSearchTerm(String searchTerm) {
@@ -59,5 +49,4 @@ public class Header {
         driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
         return PageFactory.newPage(driver, clazz);
     }
-
 }
