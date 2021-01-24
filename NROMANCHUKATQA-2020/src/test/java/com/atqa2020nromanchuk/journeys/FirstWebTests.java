@@ -41,10 +41,10 @@ public class FirstWebTests extends BaseTest {
     public void setupTest() {
 
         //TODO: 09.01.2021 move it to the BaseTest.java................
-        System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        this.wait = new WebDriverWait(driver, 10);
+//        System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
+  //      driver = new ChromeDriver();
+    //    driver.manage().window().maximize();
+      //  this.wait = new WebDriverWait(driver, 10);
         driver.get(getMainUrl());
         // ............................................................
 
@@ -145,5 +145,6 @@ public class FirstWebTests extends BaseTest {
             driver.findElement(By.xpath(acceptButtonLocator)).click();
         }
     }
+
 
 }
