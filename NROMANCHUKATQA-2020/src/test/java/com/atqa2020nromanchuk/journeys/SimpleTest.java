@@ -36,7 +36,7 @@ public class SimpleTest extends BaseTest {
         if (driver.findElement(By.xpath(acceptButtonLocator)).isDisplayed()) {
             driver.findElement(By.xpath(acceptButtonLocator)).click();
         }
-        System.out.println("setup sample test");
+        System.out.println("setup simple test");
     }
 
     @Test(priority = 0, suiteName = "main")

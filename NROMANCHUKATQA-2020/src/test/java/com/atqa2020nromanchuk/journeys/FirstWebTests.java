@@ -6,10 +6,8 @@ import com.atqa2020nromanchuk.framework.SearchTermsDataProvider;
 import com.atqa2020nromanchuk.listeners.TestListener;
 import com.atqa2020nromanchuk.pages.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -21,7 +19,7 @@ public class FirstWebTests extends BaseTest {
 
     private HomePage homePage;
     private WallShelfPage wallShelfPage;
-    private SearchResultPage searchResultPage;
+    private SearchResultsPage searchResultPage;
     private KitchenPage kitchenPage;
     private NewLowerPricesPage newLowerPricesPage;
     private DesignInteriorCentrePage designInteriorCentrePage;
@@ -41,10 +39,10 @@ public class FirstWebTests extends BaseTest {
     public void setupTest() {
 
         //TODO: 09.01.2021 move it to the BaseTest.java................
-        System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        this.wait = new WebDriverWait(driver, 10);
+//        System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
+  //      driver = new ChromeDriver();
+    //    driver.manage().window().maximize();
+      //  this.wait = new WebDriverWait(driver, 10);
         driver.get(getMainUrl());
         // ............................................................
 
@@ -79,7 +77,7 @@ public class FirstWebTests extends BaseTest {
         //Given user opens a browser and provides a valid url
 
         //When user provides a search term from enum file and clicks on search button
-        searchResultPage = homePage.searchForItem(SearchResultPage.class, searchTerm);
+        searchResultPage = homePage.searchForItem(SearchResultsPage.class, searchTerm);
         //And checks for cookies
         checkForCookies();
         //Then title on the results page contains search term
@@ -145,5 +143,6 @@ public class FirstWebTests extends BaseTest {
             driver.findElement(By.xpath(acceptButtonLocator)).click();
         }
     }
+
 
 }

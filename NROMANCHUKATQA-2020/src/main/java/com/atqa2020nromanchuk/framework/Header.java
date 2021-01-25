@@ -1,8 +1,10 @@
 package com.atqa2020nromanchuk.framework;
 
+import com.atqa2020nromanchuk.pages.NewReleasesPage;
 import com.atqa2020nromanchuk.pages.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class Header {
@@ -13,6 +15,11 @@ public class Header {
     private String newLowerPricesLinkLocator = "//body/aside/div[2]/nav[@class='hnf-menu__nav2']/ul/li[2]/a";
     private String designInteriorCentreButtonLocator = "//header/div/div/div/nav/ul/li[3]/a";
     private String productsLowerTwentyButtonLocator = "//body/aside/div[2]/nav[2]/ul/li[3]/a";
+    private String allButtonLocator = "//div[@class='nav-left']/a";
+    private String newReleasesTopMenuButtonLocator = "//div[@id='nav-xshop']/a[contains(text(),'New Releases')]";
+    private String electronicsTopMenuButtonLocator= "//div[@id='nav-xshop']/a[contains(text(),'Electronics')]";
+
+
 
     public Header(RemoteWebDriver driver) {
         this.driver = driver;
@@ -49,4 +56,27 @@ public class Header {
         driver.findElement(By.xpath(productsLowerTwentyButtonLocator)).click();
         return PageFactory.newPage(driver, clazz);
     }
+
+    public Header clickOnAllButton() {
+        driver.findElementByXPath(allButtonLocator).click();
+        return this;
+    }
+
+    public <T extends Page> T navigateToNewReleasesPage(Class<T> clazz) throws Exception {
+        return PageFactory.newPage(driver, clazz);
+    }
+
+    public <T extends Page> T clickOnNewReleasesButtonFromTopMenu(Class<T> clazz) throws Exception {
+        driver.findElement(By.xpath(newReleasesTopMenuButtonLocator)).click();
+        return PageFactory.newPage(driver,clazz);
+    }
+
+
+    public <T extends Page> T clickOnElectronicsFromTopMenu(Class<T> clazz) throws Exception {
+        driver.findElement(By.xpath(electronicsTopMenuButtonLocator)).click();
+        return PageFactory.newPage(driver,clazz);
+    }
+
+
+
 }
