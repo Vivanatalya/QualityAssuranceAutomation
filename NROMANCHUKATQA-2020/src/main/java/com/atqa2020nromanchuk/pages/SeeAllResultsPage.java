@@ -11,7 +11,7 @@ public class SeeAllResultsPage extends Page {
     private String sortFieldLocator = "//span[@class='a-dropdown-container']//span[@class='a-button-inner']";
     private String avgCustomerReviewChoiseLinkLocator = "//div[@class='a-popover-inner']/ul/li[4]/a";
     private String allMonitorsLocator = "//div[@class='s-include-content-margin s-border-bottom s-latency-cf-section']";
-    private String starsRatingLocator ="//div[@class='a-section a-spacing-none a-spacing-top-micro']//span[@class='a-declarative']/a/i[1]/span";
+    private String starsRatingLocator = "//div[@class='a-section a-spacing-none a-spacing-top-micro']/div[@class='a-row a-size-small']/span[@aria-label][1]";
             //"//span[contains(text(),'stars')]";
     public SeeAllResultsPage(RemoteWebDriver driver) {
         super(driver);
@@ -33,12 +33,13 @@ public class SeeAllResultsPage extends Page {
 
         for (WebElement element : elements) {
             WebElement ratingElement = element.findElement(By.xpath(starsRatingLocator));
-            String ratingElementText = ratingElement.getText();
+            String ratingElementText = ratingElement.getAttribute("aria-label");
             String[] ratingText = ratingElementText.split(" ");
             double currentRating = Double.parseDouble(ratingText[0]);
             if (previousRating < currentRating) {
                 return false;
             }
+            previousRating = currentRating;
         }
         return true;
     }
