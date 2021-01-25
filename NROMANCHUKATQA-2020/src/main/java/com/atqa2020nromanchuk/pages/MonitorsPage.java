@@ -10,6 +10,7 @@ public class MonitorsPage extends Page {
     private String topRatedTitleLocator = "//div[@class='a-section octopus-pc-card-title']/span";
     private String seeAllLinkLocator="//div[@class='a-section octopus-pc-card-title']/a";
     private static String TOP_RATED_TITLE="Top Rated";
+    private String seeAllResultsLinkLocator="//div[@class='a-box-inner']/a";
 
     public MonitorsPage(RemoteWebDriver driver) {
         super(driver);
@@ -27,5 +28,9 @@ public class MonitorsPage extends Page {
     public <T extends Page> T navigateToSeeAllPage(Class<T> clazz) throws Exception{
         driver.findElement(By.xpath(seeAllLinkLocator)).click();
         return PageFactory.newPage(driver,clazz);
+    }
+    public <T extends Page> T navigateToSeeAllResults(Class<T> clazz) throws Exception{
+     driver.findElement(By.xpath(seeAllResultsLinkLocator)).click();
+     return PageFactory.newPage(driver, clazz);
     }
 }

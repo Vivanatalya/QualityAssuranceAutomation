@@ -88,14 +88,14 @@ public abstract class BaseTest {
 
         //driver.get("https://www.amazon.co.uk");
     }
-//
-//    @AfterMethod(alwaysRun = true)
-//    public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//        // Helper.Logger.LogInfo("Driver teardown");
-//    }
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+        // Helper.Logger.LogInfo("Driver teardown");
+    }
 
     protected boolean isURLValid(String expectedURL) {
         return driver.getCurrentUrl().contains(expectedURL);
